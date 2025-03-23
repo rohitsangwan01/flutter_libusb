@@ -1,4 +1,4 @@
-## Flutter LibUsb
+# Flutter LibUsb
 
 A Flutter plugin that provides a wrapper around libusb, enabling USB device access and management across multiple platforms.
 
