@@ -1,0 +1,36 @@
+name: flutter_libusb
+description: "Libusb implementation for flutter"
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ^3.7.2
+  flutter: ">=3.3.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  ffi: ^2.1.4
+  flutter_usb_event: ^1.0.1
+  udev: ^0.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  ffigen: ^18.0.0
+
+ffigen:
+  name: LibUsb
+  output: "lib/generated/generated_bindings.dart"
+  headers:
+    entry-points:
+      - "libusb.h"
+
+flutter:
+  plugin:
+    platforms:
+      linux:
+        pluginClass: FlutterLibusbPlugin
+      macos:
+        pluginClass: FlutterLibusbPlugin
